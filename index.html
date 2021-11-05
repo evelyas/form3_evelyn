@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>Formulario libre</title>
+<body style="text-align: center; background-color: rgb(185, 236, 238);">
+    <h1 style="color: brown;">Residencia Buena Vista</h1>
+    <p>Le damos la bienvenida a nuestra residencia <i>Buena Vista</i>, en donde sus mayores estarán bajo el mejor de los cuidados a mano de nuestros mejores especialistas. <br>A continuación encontrará el formulario de ingreso a nuestro centro. Por favor haga caso a las indicaciones que se le pide y muchas gracias por confíar en nosotros. <br><br><i><b>Para cualquier consulta póngase en contacto con nosotros: 764339267 - 65439208</b></i></p><br>
+    <img src="residencia.jpg" alt="residencia"><br><br>
+    <h3>Formulario de registro</h3>
+<form action="/BuenaVista.php">
+    <fieldset style="background-color: rgb(220, 245, 255); font-family: 'Times New Roman', Times, serif; font-size: small;">
+            <legend style="text-align: left;">Datos personales</legend>
+          <label for="nombre">PRIMER APELLIDO:</label>
+       <input type="text" id="1ape" name="nombre" placeholder="Pérez" maxlength="50" required><br><br>
+          <label for="1ape">SEGUNDO APELLIDO:</label>
+       <input type="text" id="2ape" name="1ape" placeholder="Fernández" maxlength="50"><br><br>
+          <label for="1ape">NOMBRE COMPLETO:</label>
+       <input type="text" id="nombre" name="1ape" placeholder="Teresa de San Marcos" maxlength="50" required><br><br>
+
+       <p>SEXO:
+     <input type="radio" id="Mujer" name="sexo" value="Mujer">
+        <label for="Mujer">Mujer</label>
+     <input type="radio" id="Hombre" name="sexo" value="Hombre">
+        <label for="Hombre">Hombre</label>
+       </p>
+
+     <label for="nacimiento">FECHA DE NACIMIENTO:</label>
+        <input type="date" id="nacimiento" name="nacimiento" required><br><br>
+
+        <label for="lugarnaci">LUGAR DE NACIMIENTO:</label>
+     <input type="text" id="lugarnaci" name="1ape" placeholder="Lanzarote, Las Palmas" maxlength="50"><br><br>
+
+       <label for="dni">DNI:</label>
+     <input type="text" id="DNI" name="dni" placeholder="XXXXXXXX-Y" maxlength="13" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[A-Z]" required><br><br>
+
+       <label for="numero">TELEFONO:</label>
+     <input type="text" id="num" name="num" placeholder="XXXXXXXXX" maxlength="9" pattern="[0-9]"><br><br>
+       
+    </fieldset><br>
+
+    <fieldset style="background-color: rgb(220, 245, 255); font-family: 'Times New Roman', Times, serif; font-size: small;">
+          <legend style="text-align: left;">Domicilio</legend>
+        <label for="calle">CALLE/PLAZA:</label>
+     <input type="text" id="Calle" name="calle" placeholder="Primero de Mayo" maxlength="50" required>
+       <label for="numero">NÚMERO:</label>
+     <input type="text" id="numero" name="numero" placeholder="XX" maxlength="20" size="2" required><br><br>
+
+     <p>MUNICIPIO:
+     <input list="browsers" name="municipio">
+                <datalist id="browsers">
+                  <option value="Antigua"></option>
+                  <option value="Betancuria"></option>
+                  <option value="La Oliva"></option>
+                  <option value="Pájara"></option>
+                  <option value="Puerto del Rosario"></option>
+                  <option value="Tuineje"></option>
+                </datalist>
+     </p>
+
+     <label for="localidad">LOCALIDAD:</label>
+     <input type="text" id="localidad" name="localidad" placeholder="Tarajalejo" maxlength="50" required><br><br>
+     <p>PROVINCIA:
+     <select id="provincias" name="provincias">
+        <option value="bal">Las Palmas</option>
+        <option value="lp">Sta. Cruz de Tenerife</option><br>
+      </select>
+     </p>
+
+     <label for="cp">CODIGO POSTAL:</label>
+     <input type="text" id="cp" name="localidad" placeholder="XXXXX" maxlength="5" pattern="[0-9]" required><br><br>
+
+    </fieldset><br>
+    <fieldset style="background-color: rgb(220, 245, 255); font-family: 'Times New Roman', Times, serif; font-size: small;">
+          <legend style="text-align: left;">Datos personales en caso de incapacitación</legend>
+   <p style="text-align: left; font-size: medium;">Rellenar sólo con los datos del representante legal.</p>
+   <label for="nombre">PRIMER APELLIDO:</label>
+   <input type="text" id="1apel" name="nombre" placeholder="Pérez" maxlength="50" required><br><br>
+      <label for="1ape">SEGUNDO APELLIDO:</label>
+   <input type="text" id="2apel" name="1ape" placeholder="Fernández" maxlength="50"><br><br>
+      <label for="1ape">NOMBRE COMPLETO:</label>
+   <input type="text" id="name" name="1ape" placeholder="Teresa de San Marcos" maxlength="50" required><br><br>
+
+   <label for="numero">TELEFONO:</label>
+   <input type="text" id="number" name="num" placeholder="XXXXXXXXX" maxlength="9" pattern="[0-9]" required><br><br>
+
+     <label for="email">CORREO ELECTRÓNICO:</label>
+   <input type="email" id="email" name="email" placeholder="xxxxx@xxxx.xx" required><br><br>
+
+</fieldset><br>
+
+<fieldset style="background-color:rgb(220, 245, 255); font-family: 'Times New Roman', Times, serif;">
+    <legend style="text-align: left; font-size: small;">Régimen de estancia</legend>
+    <p style="text-align: left;">Marque los servicios que desea para el solicitante.</p>
+
+  <input type="checkbox" id="ser1" name="servicio1" value="residencia">
+  <label for="ser1">RESIDENCIA</label>
+  <input type="checkbox" id="ser2" name="servicio2" value="estanciatemp">
+  <label for="ser2">ESTANCIA TEMPORAL</label>
+  <input type="checkbox" id="ser3" name="servicio3" value="centrodedia">
+  <label for="ser3">SÓLO CENTRO DE DÍA</label>
+  <input type="checkbox" id="ser4" name="servicio4" value="comidas">
+  <label for="ser4">COMIDAS</label><br>
+  <input type="checkbox" id="ser5" name="servicio5" value="servicios">
+  <label for="ser4">SERVICIOS COMPLEMENTARIOS*</label><br><br>
+
+  <p style="text-align: left;">*Los servicios complementarios serán específicos a cada cliente. Póngase en contacto con nosotros para más información.</p><br><br>
+
+  <input type="checkbox" style="text-align: right;"> Acepto las condiciones.<br>
+  <input type="checkbox" checked="checked" style="text-align: right;">Deseo recibir publicidad sobre el centro.
+
+</fieldset><br>
+
+<input type="submit" value="Enviar formulario"><br><br>
+<input type="reset" value="Borrar formulario"><br><br><br>
+
+<hr>
+
+<h3>Residencia Buena Vista:</h3>
+<p>Le damos nuevamente las gracias por confíar en nuestro Hogar. En nuestra residencia tenemos una alta implicación con nuestros internos y sus familias, con una atención personalizada para cada uno de nuestros clientes y un precio accesible a todos los bolsillos. <br>En nuestras instalaciones ofrecemos un trato de tú a tú con cada uno de nuestros clientes, además de incertivar la independencia de nuestros mayores y apoyarlos cognitivamente. También poseemos unas amplicas instalaciones acompañadas de jardínes, comedor, sala de juegos... <br>Ofrecemos ayudas especiales a personas con movilidad reducida, personas con Alzheimer y Demencia o personas dentro del espectro autista. <br>En nuestro comedor se ofrece una gran variedad de comidas para celiacos, vegetarianos y veganos. También puede solicitar un menú especial en caso de alergias. <br><br>Como ve, en Buena Vista sus mayores se sentiran como en casa, no dude en ponerse en contacto con nosotros. Gracias y esperamos verle pronto! ;)</p><br><br>
+    
+<img src="residencia2.jpg" alt="vista frontal"><br><br><br>
+
+</form>
+</body>
+
+</html>
